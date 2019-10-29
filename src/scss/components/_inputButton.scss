@@ -1,0 +1,68 @@
+.InputButton {
+  height: 48px;
+  font-size: 20px;
+  font-family: Inter;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  input {
+    width: 400px;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+    border: 1px solid $color-oil;
+    padding-left: 16px;
+    font-size: 1.6rem;
+    color: $color-oil;
+    flex: 0.6;
+    max-width: 300px;
+    border-right: 0;
+    // background: #f1f1f1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    height: 100%;
+    padding: 0 16px;
+    border-radius: 0 12px 12px 0;
+    border: 1px solid #32757B;
+    border-left: 0;
+    font-size: 1.6rem;
+    color: $color-white;
+    background: #32757B;
+
+    transition: background ease 450ms;
+
+    &.subscribed {
+      background: #40C390;
+    }
+    // flex: 0.4;
+    // max-width: 200px;
+  }
+
+
+  @include respond(phone) {
+    flex-direction: column;
+    height: auto;
+
+    input {
+      width: auto;
+      border-right: 1px solid #333;
+      border-radius: 4px;
+      padding: 16px;
+      margin-bottom: 8px;
+      max-width: initial;
+    }
+
+    button {
+      width: auto;
+      border-left: 1px solid #32757B;
+      border-radius: 4px;
+      padding: 16px;
+      cursor: pointer;
+    }
+  }
+}

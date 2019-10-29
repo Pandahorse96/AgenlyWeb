@@ -1,0 +1,33 @@
+.Why {
+  @include mainContainer;
+  flex-direction: column;
+
+
+  h3 {
+    font-size: 5.5rem;
+    line-height: 1.25;
+    font-variation-settings: 'wght' 375;
+    margin-bottom: 24px;
+    font-weight: 500;
+    max-width: 900px;
+    color: $color-oil;
+
+    @include respond(phone) {  
+      font-size: 4rem;
+      margin-bottom: 12px;
+    }
+  }
+
+  span {
+    font-size: 2rem;  
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    max-width: 900px;
+    color: $color-oil;
+
+    @include respond(phone) {  
+      font-size: 1.8rem;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: white;
+  // width: 100%;
+  @include mainContainer;
+  padding-top: 32px !important;
+  padding-bottom: 3.2rem!important;
+
+  @include respond(phone) {  
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+
+    form {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    a {
+      font-size: 1.6rem;
+      text-decoration: underline;
+      transition: color ease 450ms;
+
+      &:hover {
+        color: #E96E1F;
+      }
+    }
+
+    form {
+      height: 36px;
+      margin-left: 32px;
+
+      button, input {
+        font-size: 1.4rem;
+        width: auto;
+      }
+
+      input {
+        border-radius: 6px 0 0 6px;
+      }
+
+      button {
+        border-radius: 0px 6px 6px 0px;
+        padding: 0 10px;
+      }
+    }
+  }
+}
